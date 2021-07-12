@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navigation />
         <Switch>
           <Route path="/" exact component={() => <Home />} />
@@ -17,7 +17,7 @@ function App() {
           <Route path="/contact" exact component={() => <Contact />} />
         </Switch>
         <Footer />
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
